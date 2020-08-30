@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/bootstrap.min.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/drugi.css') }}"/>
+    <script
+            src="https://kit.fontawesome.com/f5a9dac7a5.js"
+            crossorigin="anonymous"
+    ></script>
+    <script>
+         function calculateTotal()
+         {
+            var price = document.getElementById('price').value;
+            var amount = document.getElementById('amount').value;
+            var total = price * amount;
+            document.getElementById('total').value = total;
+         }
+    </script>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="static/img/favicon.ico" type="image/x-icon">
+    <title>Karte.rs</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="container-fluid">
+        <div class="header col-md-12">
+            <div class="row">
+                <div class="col-lg-2 col-md-3 col-sm-10 col-9">
+                    <div class="logo">
+                        <a href="{{ url_for('main') }}"><h1>karte.rs</h1></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-2 col-3">
+                    <div class="nav">
+                        <label for="toggle">&#9776;</label>
+                        <input type="checkbox" id="toggle"/>
+                        <div class="lista">
+                            <ul>
+                                <a href="{{ url_for('about') }}">
+                                    <li>o nama</li>
+                                </a>
+                                <a href="{{ url_for('categories') }}">
+                                    <li>kategorije</li>
+                                </a>
+                                <a href="{{ url_for('login') }}">
+                                    <li>uloguj se</li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-10 col-9">
+                    <form action="">
+                        <div class="forma row">
+                            <div class="col-md-9 col-sm-9 col-9">
+                                <input type="text" placeholder="Naziv, Tip dogadjaja..."/>
+                            </div>
+                            <div class="search col-md-3 col-sm-3 col-3 ">
+                                <a href=""><img src="img/search.jpg" alt=""/></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-3 col-md-2 col-sm-2 col-3">
+                    <div class="login">
+                        <div class="covek">
+                            <a href="{{ url_for('login') }}"><img src="login.png" alt=""/></a>
+                        </div>
+                        <a href="{{ url_for('login') }}"><h4>uloguj se/registracija</h4></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class=" uloguj homepage col-md-12">
+            <div
+                    class="row"
+                    style="margin: auto; z-index: 2;padding-top: 40px; padding-bottom: 20px;width: 80%;"
+            >
+                <div class="col-lg-12 col-md-12" style="margin-top: 20px;">
+                    <div class="desni col-md-12">
+                        <div
+                                class="col-md-12"
+                                style="text-align: center; padding-top: 40px; padding-bottom: 30px;"
+                        >
+                            <h1>Kupovina karte za događaj {{event['_nazivDogadjaja']}}</h1>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <div class="text row">
+                                    <form action="/buy_ticket/{{event['_id']}}" method="POST">
+                                        <div class="com-12 proizvodi" style="margin-left:5%;">
+                                            <h6>Kategorija događaja: {{event['_kategorijaDogadjaja']}}</h6>
+                                            <br><br>
+                                            <img src="/static/img/{{event['_slikaDogadjaja']}}" alt="" height="100" width="100">
+                                            <h6>{{event['_nazivDogadjaja']}}</h6>
+                                            <h6>{{event['_mestoDogadjaja']}}</h6>
+                                            <h6>{{event['_vremePocetkaDogadjaja']}}
+                                                {{event['_datumPocetkaDogadjaja']}}</h6>
+                                            <h6>{{event['_opisDogadjaja']}}</h6>
+                                            Cena karte: <input type="number" id="price"
+                                                               value="{{event['_cenaKarteA']}}" readonly/>
+                                            <div class="cena">
+                                                <h6>Broj karata: <input type="number" id="amount" name="amount"
+                                                                        onchange="calculateTotal()"></h6>
+                                            </div>
+                                            Ukupna cena: <input type="number" id="total"
+                                                                value="{{event['_cenaKarteA']}}"
+                                                                readonly/>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <br>
+                                            <br>
+                                            <input type="submit"
+                                                   value="Zavrsi kupovinu"
+                                                   class="btn btn-primary btn-md"
+                                                   style="float: right; margin-right: 6%; width:200px;"/>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer
+                class="footer col-md-12	"
+                style="background-color: rgb(31, 38, 45);"
+        >
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="logo">
+                        <a href="{{ url_for('main') }}"><h1>karte.rs</h1></a>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"><i class="fab fa-facebook-f"></i></div>
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4"></div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <ul class="fulist">
+                        <li><a href="{{ url_for('about') }}">O nama</a></li>
+                        <li><a href="{{ url_for('contact') }}">Kontakt</a></li>
+                        <li><a href="{{ url_for('help_page') }}">Pomoć</a></li>
+                        <li><a href="{{ url_for('terms') }}">Uslovi poslovanja</a></li>
+                        <li><a href="{{ url_for('privacy_policy') }}">Politika privatnosti</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="fulist">
+                        <li><a href="{{ url_for('categories') }}">Kategorije</a></li>
+                        <li><a href="{{ url_for('festivals') }}">Festivali</a></li>
+                        <li><a href="{{ url_for('concerts') }}">Koncerti</a></li>
+                        <li><a href="{{ url_for('sport') }}">Sport</a></li>
+                        <li><a href="{{ url_for('other') }}">Ostalo</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="fulist">
+                        <li><a href="{{ url_for('login') }}">Uloguj se</a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class=" row rezime ">
+                <p>
+                    RAF team: Nikola Hromčik, Dušica Stevanović, Sara Đenić,
+                    Dimitrije Rakić
+                </p>
+            </div>
+        </footer>
+    </div>
+</div>
+</body>
+</html>

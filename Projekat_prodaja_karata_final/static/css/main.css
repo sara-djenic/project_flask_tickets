@@ -1,0 +1,369 @@
+.header {
+	width: 100%;
+	min-height: 100px;
+	background-image: linear-gradient(
+		to left,
+		#026cdf,
+		#60a5ee,
+		#026cdf,
+		#026cdf
+	);
+}
+.wrapper {
+	width: 100%;
+}
+.container-fluid {
+	width: 100%;
+	padding: 0;
+	margin: auto;
+}
+
+.header .row {
+}
+.logo {
+	padding-top: 20px;
+	margin-right: 5%;
+}
+
+.logo h1 {
+	font-size: 36px;
+	font-weight: bolder;
+	color: #fff;
+	font-style: oblique;
+}
+
+.logo a {
+	text-decoration: none;
+}
+.nav {
+	height: 70px;
+}
+
+.nav label {
+	margin-top: 28px;
+	margin-left: 10%;
+	font-size: 26px;
+	width: 30px;
+	font-weight: bolder;
+	color: #fff;
+	display: none;
+}
+#toggle {
+	display: none;
+}
+
+.lista {
+	display: inline;
+	width: 100%;
+}
+.lista ul {
+	padding-top: 30px;
+	padding-left: 0;
+}
+.lista ul li {
+	display: inline;
+	padding: 3%;
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #fff;
+	overflow: hidden;
+}
+.lista ul a {
+	text-decoration: none;
+}
+
+.forma {
+	padding-top: 30px;
+}
+
+.login {
+	padding-top: 30px;
+}
+.login h4 {
+	padding-left: 5%;
+	color: #fff;
+	font-size: 20px;
+}
+.login a {
+	text-decoration: none;
+	color: #fff;
+}
+.login a:hover {
+	text-decoration: underline;
+}
+.covek {
+	display: none;
+}
+.forma {
+	margin-left: 5px;
+	width: 95%;
+	border: solid 1px #fff;
+	border-radius: 5px;
+	height: 40px;
+	margin-top: 30px;
+	padding-top: 5px;
+	background-color: #589feb;
+}
+
+.forma input {
+	border: none;
+	background-color: transparent;
+	width: 95%;
+	margin-right: 5%;
+	margin-left: 0%;
+}
+.forma img {
+	height: 30px;
+}
+.forma .col-md-3 {
+	padding-left: 8%;
+	padding-right: 0;
+}
+.forma input::placeholder {
+	font-weight: bold;
+	color: #fff;
+	padding-left: 5%;
+}
+
+.naslovna {
+	height: 70vh;
+	background: url("../img/section.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+
+::-webkit-scrollbar {
+	background: #fff;
+	width: 14px;
+}
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 10px #00000070;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(125deg, #34495e, #3498db);
+	border-radius: 10px;
+}
+
+.homepage {
+	padding-left: 20px;
+	width: 100%;
+}
+. .slika {
+	padding: 10px;
+}
+
+.slika img {
+	cursor: pointer;
+	width: 100%;
+	height: 300px;
+	border-radius: 3px;
+}
+.slika img:hover {
+	opacity: 0.7;
+}
+.text {
+	cursor: pointer;
+}
+.text p {
+	font-size: 16px;
+	color: rgb(145, 141, 141);
+}
+.text a {
+	font-size: 22px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.levi {
+	background-color: rgb(255, 255, 255);
+	box-shadow: rgba(0, 0, 0, 0.3) -4px 4px 8px 0px;
+}
+
+.novosti {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid rgb(124, 120, 120);
+	margin-bottom: 20px;
+}
+
+.slikica img {
+	cursor: pointer;
+	width: 100%;
+	height: 220px;
+	border-radius: 3px;
+}
+
+.text-mali {
+	cursor: pointer;
+}
+
+.text-mali p {
+	font-size: 16px;
+	color: rgb(145, 141, 141);
+}
+
+.text-mali a {
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.footer {
+	width: 100%;
+	padding-left: 20px;
+	padding-bottom: 2%;
+	padding-top: 5%;
+}
+
+.fulist {
+	padding-top: 30px;
+	padding-left: 30px;
+}
+
+.fulist li {
+	padding-bottom: 8px;
+}
+
+.fulist li a {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.fulist li a:first-child {
+	font-weight: bolder;
+}
+
+.fulist li:first-child {
+	padding-bottom: 18px;
+}
+
+.fulist li:first-child a {
+	margin-bottom: 10px;
+	border-bottom: 1px solid rgb(75, 71, 71);
+	font-weight: bolder;
+	text-transform: uppercase;
+}
+
+.footer hr {
+	height: 3px;
+	margin-top: none;
+}
+
+.rezime {
+	text-align: center;
+	margin-left: 2%;
+	margin-right: 2%;
+	border-top: 1px solid rgb(80, 77, 77);
+	border-bottom: 1px solid rgb(80, 77, 77);
+}
+
+.rezime p {
+	width: 100%;
+	text-align: center;
+	padding-top: 20px;
+	font-size: 16px;
+	color: white;
+}
+
+.sadrzaj {
+	display: none;
+}
+
+@media only screen and (max-width: 1140px) {
+	.nav label {
+		display: block;
+		margin-left: 30%;
+		cursor: pointer;
+		position: relative;
+	}
+	.lista {
+		text-align: center;
+		width: 30%;
+		position: absolute;
+		display: none;
+		z-index: 1;
+		top: 28px;
+		margin: auto;
+		width: 200px;
+	}
+	.lista ul li {
+		display: block;
+		font-size: 14px;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: #fff;
+		overflow: hidden;
+		border: 1px solid #34495e;
+		background-color: #147ef0;
+	}
+	.lista ul a {
+		text-decoration: none;
+	}
+	#toggle:checked + .lista {
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 920px) {
+	.login a h4 {
+		display: none;
+	}
+	.covek {
+		padding-top: 10px;
+		display: inline-block;
+		margin-left: 30%;
+	}
+	.covek img {
+		cursor: pointer;
+		height: 30px;
+		width: 30px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.header {
+		padding-bottom: 20px;
+	}
+	.lista {
+		text-align: center;
+		width: 30%;
+		position: absolute;
+		display: none;
+		z-index: 1;
+		top: 28px;
+		right: 30px;
+		width: 200px;
+	}
+	.forma input {
+		margin-right: 0;
+	}
+	.search {
+		padding-left: 0px;
+	}
+	.slikica img{
+		display: block;
+		width: 60%;
+		margin: auto;
+	}
+	.slikica{
+		width: 100%;
+		margin: auto;
+	}
+}
+@media only screen and (max-width: 992px){
+	.slikica{
+		width: 80%;
+		margin: auto;
+	}
+	.slikica img{
+		display: block;
+		width: 60%;
+		margin: auto;
+	}
+}

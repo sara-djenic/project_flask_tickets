@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/bootstrap.min.css') }}" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/drugi.css') }}" />
+		<script
+			src="https://kit.fontawesome.com/f5a9dac7a5.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="static/img/favicon.ico" type="image/x-icon">
+		<title>Karte.rs - Kategorije</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="container-fluid">
+				<div class="header col-md-12">
+					<div class="row">
+						<div class="col-lg-2 col-md-3 col-sm-10 col-9">
+							<div class="logo">
+								<a href="{{ url_for('main') }}"><h1>karte.rs</h1></a>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-2 col-3">
+							<div class="nav">
+								<label for="toggle">&#9776;</label>
+								<input type="checkbox" id="toggle" />
+								<div class="lista">
+									<ul>
+										<a href="{{ url_for('about') }}"><li>o nama</li></a>
+										<a href="{{ url_for('categories') }}"><li>kategorije</li></a>
+										<a href="{{ url_for('login') }}"><li>uloguj se</li></a>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-10 col-9">
+							<form action="">
+								<div class="forma row">
+									<div class="col-md-9 col-sm-9 col-9">
+										<input type="text" placeholder="Naziv, Tip dogadjaja..." />
+									</div>
+									<div class="search col-md-3 col-sm-3 col-3 ">
+										<a href=""><img src="/static/img/search.jpg" alt=""/></a>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="col-lg-3 col-md-2 col-sm-2 col-3">
+							<div class="login">
+								<div class="covek">
+									<a href="{{ url_for('login') }}"><img src="login.png" alt=""/></a>
+								</div>
+								<a href="{{ url_for('login') }}"><h4>uloguj se/registracija</h4></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class=" kategorije homepage col-md-12">
+					<div
+						class="row"
+						style="padding-left: 50px; padding-right: 40px; z-index: 2;padding-top: 40px; padding-bottom: 20px;;"
+					>
+						<div class="col-lg-9 col-md-12" style="margin-top: 20px;">
+							<div class="desni col-md-12">
+								<div class="row">
+									<div
+										class="col-md-12"
+										style="text-align: center; padding-top: 40px;"
+									>
+										<h1>Kategorije:</h1>
+									</div>
+									<div class="col-md-12 ">
+										<div class="text">
+											<a href="{{ url_for('festivals') }}">Festivali</a>
+											<button
+												class="btn btn-primary btn-md"
+												style="float: right; margin-right: 3%; width: 80px;"
+												onclick="window.location.href ='{{ url_for('festivals') }}'"
+											>
+												Više
+											</button>
+										</div>
+									</div>
+									<div class="col-md-12 ">
+										<div class="text">
+											<a href="{{ url_for('concerts') }}">Koncerti</a>
+											<button
+												class="btn btn-primary btn-md"
+												style="float: right; margin-right: 3%; width: 80px;"
+												onclick="window.location.href ='{{ url_for('concerts') }}'"
+											>
+												Više
+											</button>
+										</div>
+									</div>
+									<div class="col-md-12 ">
+										<div class="text">
+											<a href="{{ url_for('sport') }}">Sport</a>
+											<button
+												class="btn btn-primary btn-md"
+												style="float: right; margin-right: 3%; width: 80px;"
+												onclick="window.location.href ='{{ url_for('sport') }}'"
+											>
+												Više
+											</button>
+										</div>
+									</div>
+									<div class="col-md-12 ">
+										<div class="text" style="border-bottom: none;">
+											<a href="{{ url_for('other') }}">Ostalo</a>
+											<button
+												class="btn btn-primary btn-md"
+												style="float: right; margin-right: 3%; width: 80px;"
+												onclick="window.location.href ='{{ url_for('other') }}'"
+											>
+												Više
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-3 col-md-12" style="margin-top: 20px;">
+							<div class="levi col-md-12" style="padding-bottom: 40px;">
+								<div class="row">
+									<div class="novosti col-lg-12">
+										<h4>Dešavanja</h4>
+									</div>
+									<div class="slikica col-lg-12 col-md-12 col-sm-12">
+										<h2>Otvara se izložba „Devedesete: Rečnik migracija“ u Muzeju Jugoslavije</h2>
+										<img src="static/img/desavanja1.jpg" alt="Ilustracija">
+										<button type="button" class="collapsible">Proširi/Smanji</button>
+										<p class="sadrzaj">U Muzeju Jugoslavije se u četvrtak, 5. decembra, u 18 časova
+											otvara izložba „Devedesete: Rečnik migracija“, na kojoj će učestvovati više od
+											trideset savremenih umetnika, umetnica i umetničkih i aktivističkih kolektiva,
+											koji se bave problemom migracija stanovništva u Srbiju i iz Srbije tokom
+											pomenute decenije. Ovo će ujedno biti prva postavka u obnovljenom enterijeru
+											zgrade Muzeja 25. maj, koja je deo kompleksa Muzeja Jugoslavije. <br>
+											„Primarni cilj izložbe je mapiranje različitih formi angažmana od devedestih do
+											danas, kroz koje su u polju umetnosti adresirani društveni, kulturni, politički
+											i pravni problemi stvoreni ovim veoma složenim i traumatičnim migracionim
+											procesima, dok je dokumentarno-istoriografski pristup stavljen u drugi plan.
+											Osim umetničkih pozicija, u izložbu su uključene pojedine inicijative i
+											organizacije iz sfere aktivizma i civilnog sektora, ali prevashodno one koje u
+											svoj rad uključuju saradnju sa savremenim umetnicima/umetnicama, ili koje su
+											pokretali umetnici/pokretale umetnice“, ističu kustoskinje izložbe Simona
+											Ognjanović i Ana Panić iz Muzeja Jugoslavije, i dodaju:
+											<br>
+											„U izložbu je uvedena i paralelna narativna linija, koja će moći da se prati
+											kroz izbor dokumenta poput zakona, političkih sporazuma i nacionalnih
+											strategija, koji su dominantno definisali statuse ljudi pogođenih migracionim
+											kretanjima. Cilj ovakve strukture izlaganja je da delimično osvetli i širi
+											kontekst u kome nastaju ili na koji referišu umetnički radovi i inicijative.“
+											Publika će sadržaj izložbe otkrivati krećući se u prostoru kroz mrežu pojmova,
+											odnosno „rečnik migracija“, koji će im pružiti aparat za čitanje i tumačenje
+											izložbe.
+											<br>
+											„Rečnik predstavlja alternativu dominatnim dikursima kroz koje se u domenu
+											zakona, javnih politika i u akademskoj sferi deluje i misli o ovim problemima.
+											On otvara pitanja dometa i uloge umetnosti, aktivizma, civilnog sektora ali i
+											javnih institucija, u rekonstrukciji prošlosti i preoblikovanju opštih mesta
+											koja dominiraju javnom sferom“, objašnjavaju autorke izložbe.
+											Pomenuti „rečnik” nastao je saradnjom kustoskinja i učesnika/učesnicaca izložbe,
+											a čine ga sledeći pojmovi, sintagme i idiomi: adresa, bespravna nužnost,
+											čišćenje, čovek, dostojanstvo/solidarnost/internacionalizam, hrabrost i/ili
+											kukavičluk, inventar, izbrisani, jugoslovenstvo, karta u jednom pravcu, kofer,
+											kompjutersko čišćenje/uzaludna nada, kuća ili dom, mesto, nelagodnost, drugi,
+											plan, predmet, prijatelji, rupe, sigurna zemlja, slobodna privremena teritorija,
+											transfer, tuga, ustanak, zakon, zemlja/teritorija, žudnja za životom.</p>
+									</div>
+									<div class="slikica col-lg-12 col-md-12 col-sm-12">
+									<h2>„VACUUM" Velče Velčeva u galeriji Instituta Servantes</h2>
+									<img src="static/img/desavanja2.jpg" alt="Ilustracija">
+									<button type="button" class="collapsible">Proširi/Smanji</button>
+									<p class="sadrzaj">Izložba „VACUUM" Velče Velčeva, koja se na provokativan i emotivan
+										način bavi temama migracije stanovništva i „odliva mozgova" biće otvorena u
+										ponedeljak, 16. decembra u 19 časova u galeriji Instituta Servantes. <br>
+										„VACUUM" je projekat u kojem se beli zid galerije odenuo praznim vešalicama. Putem
+										ove instalacije umetnik želi da odrazi situaciju u kojoj se verovatno svaki
+										posetilac postavke i lično našao, videvši kako neki član porodice napušta dom
+										ostavljajući prazne vešalice u ormaru. Suočavanje sa tom situacijom izaziva osećaj
+										nazvan horror vacui. Reč je o strahu koji osoba doživljava kad gleda u prazan ormar.
+										Mnoge vešalice koje ispunjavaju galeriju nose natpis ili tekst koji predstavlja trag
+										koji je ostavio vlasnik svake od njih. Ormari su čuvali mnogo više od odeće i sada
+										sadrže, uz usamljene vešalice, priče, sećanja, nostalgiju...
+										<br>
+										Kompozicija koju je umetnik predstavio podseća pomalo na neku vrstu groblja koje je
+										posvećeno održavanju sećanja na sve one koji su, poput njega, bili primorani da
+										napuste svoje domove bez mogućnosti povratka.
+										<br>
+										Velča Velčev rođen je 1959. godine u Dimitrovgradu. Prve dve godine Likovne
+										akademije završava u Sofiji na odseku za slikarstvo kod profesora Dobrija Dobreva.
+										Nastavlja školovanje na Fakultetu likovnih umetnosti u Beogradu gde diplomira u
+										klasi profesora Vojislava Todorića. Prvih godina nakon fakulteta živi i radi u
+										Beogradu gde se sporadično pojavljuje na likovnoj sceni grada. Od 1991.godine menja
+										mesto boravka i nastavlja svoj život i rad u Španiji, tačnije na Majorci.
+										<br>
+										Prvih godina stupa u kontakt sa grupom slikara koji mu omogućavaju da veoma brzo uđe
+										u krug avangardnih stvaralaca sa ostrva kao i iz cele Španije. Veoma važan trenutak
+										za njegovu karijeru predstavlja početak saradnje sa galeristom Franom Reusom koji mu
+										pruža punu slobodu u stvaralačkom procesu. U isto vreme, upoznaje velikog ljubitelja
+										umetnosti i kolekcionara Migela Anhela Rijeru koji vremenom postaje njegov mecena i
+										veliki prijatelj.
+										<br>
+										Izlagao je u više gradova širom Španije (Santjago de Kompostela, Madrid, Santander,
+										Barselona, Hirona, Sevilja, Kartahena...) kao i u više zemalja Evrope i sveta:
+										Nemačka, Belgija, Rusija, Grčka, Bugarska, Švedska, Izrael... Među poslednjim
+										važnijim izložbama ističu se "Remind me I'm alive" u galeriji "Haos" u Beogradu i
+										"Mente + ojos = mente - ojos" u Muzeju "Janko Dada" u gradu Ein Hod u Izraelu. Dela
+										Velče Velčeva nalaze se u više muzeja i zbirki privatnih kolekcionara.
+										<br>
+										Izložba „Vacuum" biće otvorena do kraja januara. Ulaz je slobodan.</p>
+								</div>
+								<div class="slikica col-lg-12 col-md-12 col-sm-12">
+	
+									<h2>Otvaranje izložbe "Projekat Jugoslavija"</h2>
+									<img src="static/img/desavanja3.jpg" alt="Ilustracija">
+									<button type="button" class="collapsible">Proširi/Smanji</button>
+									<p class="sadrzaj">Izložba „Projekat Jugoslavija”, autorki Ane Adamović i Milice Pekić,
+										otvara se u utorak 17. decembra u 18 časova u Muzeju Jugoslavije (u zgradi Muzeja 25.
+										maj). Postavka se sastoji iz video radova – odabranih intervjua, koji su rađeni sa sto
+										sagovornika i sagovornica različitih uzrasta i profila, iz zemalja nastalih nakon
+										raspada nekadašnje države. Izložba predstavlja završnicu istoimenog projekta, koji je
+										rezultat višegodišnje saradnje Muzeja Jugoslavije i ,,Kioska – platforme za savremenu
+										umetnost“.
+										<br>Sâm proces intervjuisanja realizovan je atipičnim postupkom. Autorke su umesto
+										konkretnog pitanja svakom učesniku ponudile karton koji opisuje neki od predmeta iz
+										zbirki Muzeja Jugoslavije, na kome se nalaze osnovne informacije o tom predmetu: opis,
+										datum ili period iz kojeg potiče i poreklo.
+										<br>
+										„Na taj način pokušale smo da kolekciju materijalnih tragova prošlosti posrednim putem
+										prevedemo u formu živih komentara, aktuelnih razmišljanja, ideja i potencijala za
+										budućnost”, objašnjavaju Ana Adamović i Milica Pekić iz platforme „Kiosk”.
+										<br>
+										„Da li je prošlost Jugoslavije već muzealizovana, istorizovana i pohranjena u arhivama?
+										Može li nam ta prošlost razjasniti barem nešto o sadašnjosti, pomoći da razumemo krizu u
+										kojoj se danas svet nalazi ili stalne poruke da je Evropska unija pred raspadom, budući
+										da trpi svakodnevne potrese i izazove? Možemo li, na primeru multinacionalne,
+										multikonfensionalne zemlje, koja se pre 25 godina raspala, početi da razmišljamo o
+										alternativama za sadašnji trenutak?”, neka su od pitanja na koje „Projekat Jugoslavija”
+										pokušava da ponudi odgovore, ističu autorke projekta, i dodaju:
+										<br>
+										„Odmakom od predmetnosti samih objekata, pokušale smo da razmišljanje o nasleđu
+										jugoslovenske države udaljimo od nostalgične vizije prošlosti, pomerajući akcenat na
+										razmišljanje o regionu, Evropi i svetu danas, koji su, čini se više nego ikada,
+										zaglavljeni u permanentnoj krizi, sukobu, netoleranciji i nejednakosti”.
+										<br>
+										„Projekat Jugoslavija” realizovan je uz podršku Balkanskog fonda za demokratiju i
+										Ministarstva kulture i informisanja Republike Srbije.
+										<br>
+										Izložba će biti otvorena do 15. aprila 2020. godine.
+									</p>
+								</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<footer
+                class="footer col-md-12	"
+                style="background-color: rgb(31, 38, 45);"
+        >
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="logo">
+                        <a href="{{ url_for('main') }}"><h1>karte.rs</h1></a>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"><i class="fab fa-facebook-f"></i></div>
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4"></div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <ul class="fulist">
+                        <li><a href="{{ url_for('about') }}">O nama</a></li>
+                        <li><a href="{{ url_for('contact') }}">Kontakt</a></li>
+                        <li><a href="{{ url_for('help_page') }}">Pomoć</a></li>
+                        <li><a href="{{ url_for('terms') }}">Uslovi poslovanja</a></li>
+                        <li><a href="{{ url_for('privacy_policy') }}">Politika privatnosti</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="fulist">
+                        <li><a href="{{ url_for('categories') }}">Kategorije</a></li>
+                        <li><a href="{{ url_for('festivals') }}">Festivali</a></li>
+                        <li><a href="{{ url_for('concerts') }}">Koncerti</a></li>
+                        <li><a href="{{ url_for('sport') }}">Sport</a></li>
+                        <li><a href="{{ url_for('other') }}">Ostalo</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="fulist">
+                        <li><a href="{{ url_for('login') }}">Uloguj se</a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class=" row rezime ">
+                <p>
+                    RAF team: Nikola Hromčik, Dušica Stevanović, Sara Đenić,
+                    Dimitrije Rakić
+                </p>
+            </div>
+        </footer>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var coll = document.getElementsByClassName("collapsible");
+			var i;
+	
+			for (i = 0; i < coll.length; i++) {
+				coll[i].addEventListener("click", function () {
+					this.classList.toggle("active");
+					var sadrzaj = this.nextElementSibling;
+					if (sadrzaj.style.display === "block") {
+						sadrzaj.style.display = "none";
+					} else {
+						sadrzaj.style.display = "block";
+					}
+				});
+			}
+		</script>
+	</body>
+</html>
